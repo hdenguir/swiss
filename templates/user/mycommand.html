@@ -7,63 +7,68 @@
 			<div class="scnd">
 				<h2 class="title">My order</h2>
 				<div class="box"> 
-					<h2 class="sub-title"><%= prod.name %> <!-- <span>Scan & Buy</span> --> </h2>
+					<!-- <h2 class="sub-title"><%= prod.name %> </h2> -->
 					<!-- <p></p> -->
+						<p class="img">
+							<% if(prod.photo){ %>
+								<img src="<%= prod.photo %>" alt="">
+							<% } %> 
+						</p>
 
-					<% if(prod.photo){ %>
-						<img src="<%= prod.photo %>" alt="">
-					<% } %> 
-						<div class="total">
-							<div>
-								<span>Quantity</span> 
+						<p class="product-title">
+							<span><%= prod.name %></span>
+						</p>
 
-								<p class="select">
-									<select name="qte" id="qte" required="required">
-										<% for(var i= 1; i<6;i++){ %>
-											<option value="<%= i %>"><%= i %></option>
-										<%};%> 
-									</select>	
-								</p>  
+						<div class="product-info-title">
+							<p>
+								Quantité
+							</p>
+							<p class="select">
+								<select name="qte" id="qte" required="required">
+									<% for(var i= 1; i<6;i++){ %>
+										<option value="<%= i %>"><%= i %></option>
+									<%};%> 
+								</select>	
+							</p> 
+							<p>
+								Price
+							</p>
+							<p>
+								<%=  prod.atiPrice %><%= prod.currency %>
+							</p> 
+						</div>
+
+						<div class="total"> 
+							<div class="product-info">
+								<p class="large detail">
+									<span>Detail</span>								
+									<span><em></em></span>
+								</p>
+								<p class="large last ht">
+									<span>Price <small>(Excluding tax)</small></span>								
+									<span>
+										<i>
+											<%= prod.atiPrice %>								
+										</i>
+										<%= prod.currency %>
+									</span>
+								</p>
+								<p class="large last tax">
+									<span>VAT</span>								
+									<span>
+										<i><%= prod.etPrice*0.08 %></i> <%= prod.currency %>
+									</span>
+								</p>
+								<p class="large last ttc">
+									<span>Price <small>(Including tax)</small></span>															
+									<span>
+										<i>
+											<%= prod.atiPrice %>								
+										</i>
+										<%= prod.currency %>								
+									</span>
+								</p>
 							</div>
-
-							<p class="large ttc">
-								<span>Price</span>								
-								<span>
-									<i>
-										<%= prod.atiPrice %>								
-									</i>
-									<%= prod.currency %>								
-								</span>
-							</p>
-
-							<p class="large detail">
-								<span>Detail</span>								
-								<span><em></em></span>
-							</p>
-							<p class="large last ht">
-								<span>Price <small>(Excluding tax)</small></span>								
-								<span>
-									<i>
-										<%= prod.atiPrice %>								
-									</i>
-									<%= prod.currency %>
-								</span>
-							</p>
-							<p class="large last tax">
-								<span>VAT</span>								
-								<span>
-									<i><%= prod.etPrice*0.08 %></i> <%= prod.currency %>
-								</span>
-							</p>
-							<p class="large last ttc">
-								<span>Price <small>(Including tax)</small></span>															
-								<span>
-									<i>
-										<%= prod.atiPrice %>								
-									</i>
-									<%= prod.currency %>								
-								</span>
-							</p>
 						</div>
 				</div>
 
@@ -89,7 +94,7 @@
 					</li>
 
 					<li class="separator-link">
-					 	<a href="#user/myaddress/myadress" class="btn-add">> Change Delivery Address</a>
+					 	<a href="#user/myaddress/myadress" class="btn-add">Change Delivery Address</a>
 					 </li>
 
 					<li class="title">Credit Card</li> 
@@ -111,7 +116,7 @@
 					</li>
 
 					<li class="separator-link">
-						<a href="#user/mycreditcard/mycreditcart" class="btn-add">> Change Credit Card</a>
+						<a href="#user/mycreditcard/mycreditcart" class="btn-add">Change Credit Card</a>
 					</li>
 				
 					<li class="separator-link"></li>
