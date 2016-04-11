@@ -65,7 +65,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 144, sprites/*.png */
 .sprites-sprite, .sprites-btn-back, .sprites-btn-opened, .sprites-btn-plus, .sprites-btn-submit, .sprites-error, .sprites-infos, .sprites-logo, .sprites-logout, .sprites-no-error, .sprites-picto-back, .sprites-picto-settings, .sprites-picto-submit-valid, .sprites-picto-submit {
-  background-image: url('../images/sprites-s34c13ff64e.png');
+  background-image: url('../images/sprites-sdcb0a2c2d0.png');
   background-repeat: no-repeat;
 }
 
@@ -890,40 +890,44 @@ ul.link2btn li {
   font-size: 15px;
 }
 /* line 597, ../src/sass/base/_base.scss */
+.home-scan ul.link2btn li {
+  display: block;
+}
+/* line 600, ../src/sass/base/_base.scss */
 ul.link2btn li a {
   color: #000;
   font-family: 'ralewayregular';
 }
-/* line 602, ../src/sass/base/_base.scss */
+/* line 605, ../src/sass/base/_base.scss */
 ul.link2btn li + li {
   margin-left: 8px;
 }
-/* line 604, ../src/sass/base/_base.scss */
+/* line 607, ../src/sass/base/_base.scss */
 ul.link2btn li + li:before {
   margin-right: 8px;
   content: "|";
   display: inline-block;
 }
-/* line 611, ../src/sass/base/_base.scss */
+/* line 614, ../src/sass/base/_base.scss */
 .scan ul.link2btn li + li {
   margin-left: 0;
   margin-top: 30px;
 }
-/* line 614, ../src/sass/base/_base.scss */
+/* line 617, ../src/sass/base/_base.scss */
 .scan ul.link2btn li + li:before {
   margin-right: 0;
   content: "";
 }
-/* line 623, ../src/sass/base/_base.scss */
+/* line 626, ../src/sass/base/_base.scss */
 .auth ul.link2btn li {
   color: #fff;
 }
-/* line 625, ../src/sass/base/_base.scss */
+/* line 628, ../src/sass/base/_base.scss */
 .auth ul.link2btn li a {
   color: #fff;
 }
 
-/* line 634, ../src/sass/base/_base.scss */
+/* line 637, ../src/sass/base/_base.scss */
 .push-adress {
   font-size: 16px;
   color: #fc0d13;
@@ -934,18 +938,18 @@ ul.link2btn li + li:before {
   -webkit-border-radius: 15px;
   border-radius: 15px;
 }
-/* line 643, ../src/sass/base/_base.scss */
+/* line 646, ../src/sass/base/_base.scss */
 .push-adress address + a {
   margin: 21px 0 8px;
 }
 
 /* class message oblig page manage my address(s) */
-/* line 650, ../src/sass/base/_base.scss */
+/* line 653, ../src/sass/base/_base.scss */
 .sep {
   margin-bottom: 36px;
 }
 
-/* line 651, ../src/sass/base/_base.scss */
+/* line 654, ../src/sass/base/_base.scss */
 .msg-oblig {
   color: #191919;
   font-family: 'MyriadProSemibold';
@@ -953,15 +957,15 @@ ul.link2btn li + li:before {
   margin: 16px 0 0;
   text-align: left;
 }
-/* line 658, ../src/sass/base/_base.scss */
+/* line 661, ../src/sass/base/_base.scss */
 .joinForm .msg-oblig {
   margin-bottom: 0;
 }
-/* line 660, ../src/sass/base/_base.scss */
+/* line 663, ../src/sass/base/_base.scss */
 .msg-oblig.bottom {
   margin-bottom: 15px;
 }
-/* line 661, ../src/sass/base/_base.scss */
+/* line 664, ../src/sass/base/_base.scss */
 .msg-oblig.last {
   background: #eaeaf1;
   padding: 16px 0;
@@ -972,36 +976,36 @@ ul.link2btn li + li:before {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 668, ../src/sass/base/_base.scss */
+/* line 671, ../src/sass/base/_base.scss */
 .msg-oblig.last a {
   display: inline-block !important;
 }
 
-/* line 675, ../src/sass/base/_base.scss */
+/* line 678, ../src/sass/base/_base.scss */
 .buttons.twice {
   overflow: hidden;
 }
-/* line 678, ../src/sass/base/_base.scss */
+/* line 681, ../src/sass/base/_base.scss */
 .buttons.twice.large span {
   color: white;
   width: 200px;
 }
-/* line 681, ../src/sass/base/_base.scss */
+/* line 684, ../src/sass/base/_base.scss */
 .buttons.twice .btn {
   float: left;
 }
-/* line 683, ../src/sass/base/_base.scss */
+/* line 686, ../src/sass/base/_base.scss */
 .buttons.twice .btn:first-child {
   height: 49px;
   width: 49px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -307px;
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   .buttons.twice .btn:first-child {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -303px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1009,24 +1013,24 @@ ul.link2btn li + li:before {
     background-size: 146px auto;
   }
 }
-/* line 685, ../src/sass/base/_base.scss */
+/* line 688, ../src/sass/base/_base.scss */
 .buttons.twice .btn:first-child span {
   top: 48px;
 }
-/* line 687, ../src/sass/base/_base.scss */
+/* line 690, ../src/sass/base/_base.scss */
 .buttons.twice .btn + .btn {
   float: right;
 }
-/* line 689, ../src/sass/base/_base.scss */
+/* line 692, ../src/sass/base/_base.scss */
 .buttons.twice .btn + .btn span {
   top: 34px;
 }
-/* line 694, ../src/sass/base/_base.scss */
+/* line 697, ../src/sass/base/_base.scss */
 .buttons.edit {
   overflow: hidden;
   margin: 25px 0;
 }
-/* line 698, ../src/sass/base/_base.scss */
+/* line 701, ../src/sass/base/_base.scss */
 .buttons.edit .btn-scan {
   height: 40px;
   line-height: 40px;
@@ -1035,18 +1039,18 @@ ul.link2btn li + li:before {
   border-radius: 10px;
   border: none;
 }
-/* line 701, ../src/sass/base/_base.scss */
+/* line 704, ../src/sass/base/_base.scss */
 .buttons.edit.middle .btn-scan {
   display: inline-block;
   width: 45%;
   float: none !important;
   font-family: 'MyriadProSemibold';
 }
-/* line 707, ../src/sass/base/_base.scss */
+/* line 710, ../src/sass/base/_base.scss */
 .buttons.edit.middle .btn-scan:first-child {
   margin-right: 8%;
 }
-/* line 715, ../src/sass/base/_base.scss */
+/* line 718, ../src/sass/base/_base.scss */
 .buttons .btn-scan:first-child {
   color: #2d2e2d !important;
   font-size: 10px;
@@ -1063,7 +1067,7 @@ ul.link2btn li + li:before {
   -webkit-border-radius: 5px;
   border-radius: 5px 5px 0 0;
 }
-/* line 730, ../src/sass/base/_base.scss */
+/* line 733, ../src/sass/base/_base.scss */
 .buttons .btn-scan + .btn-scan {
   color: #fc0d13 !important;
   font-size: 25px;
@@ -1078,19 +1082,19 @@ ul.link2btn li + li:before {
 }
 
 /* Profile page */
-/* line 747, ../src/sass/base/_base.scss */
+/* line 750, ../src/sass/base/_base.scss */
 .box-full + .box-full {
   margin-top: 30px;
   border-top: 2px solid #ff8080;
   padding-top: 20px;
 }
-/* line 753, ../src/sass/base/_base.scss */
+/* line 756, ../src/sass/base/_base.scss */
 .box-full .title {
   border: none;
   padding: 0;
 }
 
-/* line 758, ../src/sass/base/_base.scss */
+/* line 761, ../src/sass/base/_base.scss */
 .profile {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1102,26 +1106,26 @@ ul.link2btn li + li:before {
   width: 70px;
 }
 
-/* line 767, ../src/sass/base/_base.scss */
+/* line 770, ../src/sass/base/_base.scss */
 .select {
   display: inline-block;
   position: relative;
   width: 100%;
 }
-/* line 773, ../src/sass/base/_base.scss */
+/* line 776, ../src/sass/base/_base.scss */
 .select:before, .select:after {
   content: " ";
   position: absolute;
   pointer-events: none;
 }
-/* line 778, ../src/sass/base/_base.scss */
+/* line 781, ../src/sass/base/_base.scss */
 .select:before {
   width: 2.25em;
   height: 100%;
   top: 0;
   right: 0;
 }
-/* line 786, ../src/sass/base/_base.scss */
+/* line 789, ../src/sass/base/_base.scss */
 .select:after {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -1130,7 +1134,7 @@ ul.link2btn li + li:before {
   top: 50%;
   margin-top: -3px;
 }
-/* line 795, ../src/sass/base/_base.scss */
+/* line 798, ../src/sass/base/_base.scss */
 .select select {
   padding: .25em 2.5em .25em .375em;
   -webkit-appearance: none;
@@ -1144,17 +1148,17 @@ ul.link2btn li + li:before {
   height: 40px !important;
   line-height: 40px !important;
 }
-/* line 804, ../src/sass/base/_base.scss */
+/* line 807, ../src/sass/base/_base.scss */
 .select select::-ms-expand {
   display: none;
 }
 
-/* line 812, ../src/sass/base/_base.scss */
+/* line 815, ../src/sass/base/_base.scss */
 .new_address {
   display: none;
   margin-top: 15px;
 }
-/* line 816, ../src/sass/base/_base.scss */
+/* line 819, ../src/sass/base/_base.scss */
 .new_address.show {
   display: block;
 }
@@ -1162,42 +1166,42 @@ ul.link2btn li + li:before {
 /* Min View Port */
 /* Android Portrait */
 @media screen and (max-height: 456px) {
-  /* line 822, ../src/sass/base/_base.scss */
+  /* line 825, ../src/sass/base/_base.scss */
   body {
     min-height: 515px;
   }
 }
 /* iPhone 5 Portrait */
 @media screen and (max-height: 444px) {
-  /* line 823, ../src/sass/base/_base.scss */
+  /* line 826, ../src/sass/base/_base.scss */
   body {
     min-height: 504px;
   }
 }
 /* iPhone Portrait */
 @media screen and (max-height: 356px) {
-  /* line 824, ../src/sass/base/_base.scss */
+  /* line 827, ../src/sass/base/_base.scss */
   body {
     min-height: 416px;
   }
 }
 /* Android Landscape */
 @media screen and (max-height: 243px) {
-  /* line 825, ../src/sass/base/_base.scss */
+  /* line 828, ../src/sass/base/_base.scss */
   body {
     min-height: 295px;
   }
 }
 /* Android Landscape */
 @media screen and (max-height: 237px) {
-  /* line 826, ../src/sass/base/_base.scss */
+  /* line 829, ../src/sass/base/_base.scss */
   body {
     min-height: 295px;
   }
 }
 /* iPhone Landscape */
 @media screen and (max-height: 208px) {
-  /* line 827, ../src/sass/base/_base.scss */
+  /* line 830, ../src/sass/base/_base.scss */
   body {
     min-height: 268px;
   }
@@ -1276,7 +1280,7 @@ ul.link2btn li + li:before {
 .form .btn {
   height: 49px;
   width: 49px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -422px;
   background-repeat: no-repeat;
   border: none;
@@ -1286,7 +1290,7 @@ ul.link2btn li + li:before {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   .form .btn {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -417.5px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1416,14 +1420,14 @@ ul.link2btn li + li:before {
   display: block;
   height: 15px;
   width: 14px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -176px;
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   .form .formline.error i {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -174px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1436,14 +1440,14 @@ ul.link2btn li + li:before {
   display: block;
   height: 15px;
   width: 14px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -292px;
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   .form .formline.valid i {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -288.5px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1467,14 +1471,14 @@ ul.link2btn li + li:before {
   display: block;
   height: 15px;
   width: 14px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -176px;
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   .form .formline.box-radio.error i {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -174px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1487,7 +1491,7 @@ ul.link2btn li + li:before {
 .btn {
   height: 49px;
   width: 49px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -422px;
   background-repeat: no-repeat;
   border: none;
@@ -1499,7 +1503,7 @@ ul.link2btn li + li:before {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   .btn {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -417.5px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1511,14 +1515,14 @@ ul.link2btn li + li:before {
 .btn.valid {
   height: 49px;
   width: 49px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -373px;
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   .btn.valid {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -369px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1597,7 +1601,7 @@ ul.link2btn li + li:before {
   background: none;
   height: 62px;
   width: 62px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -114px;
   background-repeat: no-repeat;
   height: 60px;
@@ -1611,7 +1615,7 @@ ul.link2btn li + li:before {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   .btn-submit {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -113.5px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1626,7 +1630,7 @@ ul.link2btn li + li:before {
   background: none;
   height: 62px;
   width: 62px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 0;
   background-repeat: no-repeat;
   height: 60px;
@@ -1638,7 +1642,7 @@ ul.link2btn li + li:before {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   .btn-back {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 0;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1684,7 +1688,6 @@ ul.link2btn li + li:before {
 /* line 35, ../src/sass/layout/_header.scss */
 #header .leftButtonsContainer,
 #header .rightButtonsContainer {
-  background: #fc0d13;
   height: 27px;
   margin: -15px 0 0;
   padding: 5px;
@@ -1703,7 +1706,7 @@ ul.link2btn li + li:before {
 #header .rightButton {
   height: 21px;
   width: 18px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -271px;
   background-repeat: no-repeat;
   display: block;
@@ -1711,7 +1714,7 @@ ul.link2btn li + li:before {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   #header .rightButton {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -267.5px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1723,7 +1726,7 @@ ul.link2btn li + li:before {
 #header .infos {
   height: 14px;
   width: 19px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -191px;
   background-repeat: no-repeat;
   display: block;
@@ -1733,7 +1736,7 @@ ul.link2btn li + li:before {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   #header .infos {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -188.5px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1759,7 +1762,7 @@ ul.link2btn li + li:before {
 .logo span {
   height: 66px;
   width: 147px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -205px;
   background-repeat: no-repeat;
   font-size: 38px;
@@ -1774,7 +1777,7 @@ ul.link2btn li + li:before {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
   /* line 34, ../src/sass/tools/_mixins.scss */
   .logo span {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -202px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1945,7 +1948,7 @@ nav ul li a,
 .command .total > p.large.detail em {
   height: 26px;
   width: 26px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -88px;
   background-repeat: no-repeat;
   height: 26.5px !important;
@@ -1956,7 +1959,7 @@ nav ul li a,
   /* line 34, ../src/sass/tools/_mixins.scss */
   .command .total > div.detail em,
   .command .total > p.large.detail em {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -87px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;
@@ -1969,7 +1972,7 @@ nav ul li a,
 .command .total > p.large.detail.open em {
   height: 26px;
   width: 26px;
-  background-image: url('../images/sprites-s49ce719afc.png');
+  background-image: url('../images/sprites-se1d1f818d7.png');
   background-position: 0 -62px;
   background-repeat: no-repeat;
 }
@@ -1977,7 +1980,7 @@ nav ul li a,
   /* line 34, ../src/sass/tools/_mixins.scss */
   .command .total > div.detail.open em,
   .command .total > p.large.detail.open em {
-    background-image: url('../images/sprites-2x-scc70a7bae0.png');
+    background-image: url('../images/sprites-2x-s7b36a1afe8.png');
     background-position: 0 -60.5px;
     -moz-background-size: 146px auto;
     -o-background-size: 146px auto;

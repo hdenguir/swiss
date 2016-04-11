@@ -611,7 +611,7 @@ define([
 				hideShowHome: function(){
 
 					setTimeout(function(){
-						console.log( jQuery(".inner.auth").length );
+						//console.log( jQuery(".inner.auth").length );
 
 						if(jQuery(".inner.auth").length) 
 							jQuery("#header").addClass("hp");
