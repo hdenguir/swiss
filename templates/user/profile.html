@@ -1,0 +1,206 @@
+<%
+	var data  = model.get("data"),
+		cards = cards.get("cards"),
+		addresses = addresses.get("addresses"),
+		count = 0,
+		j = 0; 
+%>
+<div class="inner first home-scan">  
+	<div class="halfCol">   
+		<div class="box-full"> 
+			<h2 class="title">Me</h2> 
+			<form class="joinForm form" data-root="personalData" novalidate="novalidate"> 
+				<fieldset> 
+
+					<div class="halfCol">
+						<fieldset>
+							<div class="formline">
+								<p class="select">
+									<select name="title" id="title" required="required">
+										<option value="MISS" <% if( data.title.toLowerCase() == "miss"){%> selected="selected"<%}%>>MISS</option>
+										<option value="MS" <% if( data.title.toLowerCase() == "ms"){%> selected="selected"<%}%>>MS</option>
+										<option value="MR" <% if( data.title.toLowerCase() == "mr"){%> selected="selected"<%}%>>MR</option>
+									</select>
+								</p>  
+								<i></i>
+							</div>
+
+							<div class="formline">
+								<input type="text" name="first_name" id="first_name" required="required" value="<%= data.first_name %>"  /> 
+								<label for="first_name" class="oneline">First name*</label>
+								<i></i>
+							</div> 
+
+							<div class="formline">
+								<input type="text" name="last_name" id="last_name" required="required" value="<%= data.last_name %>"  />
+								<label for="last_name" class="oneline">Last name*</label>
+								<i></i>
+							</div> 
+
+							<div class="formline">
+								<input type="email" name="email" id="email" required="required" value="<%= data.email %>"  />
+								<label for="email" class="oneline">Email*</label>
+								<i></i>
+							</div> 
+							<div class="select_two tree">
+								<div class="formline">
+									<p class="select">
+										<select name="day" id="day" required="required">
+											<option value="">Day</option>
+												<% for(var i= 01; i<32;i++){ %>
+												<% if(i < 10){ i = "0"+i } %>
+													<option value="<%= i %>" <% if(data.birthdate.substring(0,2) == i){ %> selected="selected"<%}%>><%= i %></option>
+												<%}%>
+										</select>
+									</p> 
+									<i></i>
+								</div>
+								<div class="formline">
+									<p class="select">
+										<select name="month" id="month" required="required">
+											<option value="">Month</option>  
+												<% for(var i= 01; i<13;i++){ %>
+													<% if(i < 10){ i = "0"+i } %>
+													<option value="<%= i %>" <% if(data.birthdate.substring(3,5) == i){ %> selected="selected"<%}%>><%= i %></option>
+												<%};%> 
+										</select>
+									</p> 
+									<i></i>
+								</div>
+								<div class="formline">
+									<p class="select">
+										<select name="year" id="year" required="required">
+											<option value="">Year</option>
+											<% for(var i= 1960; i<2000;i++){ %>
+												<option value="<%= i %>" <% if(data.birthdate.substring(6,10) == i){ %> selected="selected"<%}%>><%= i %></option>
+											<%};%> 
+										</select>
+									</p>  
+									<i></i>
+								</div>
+							</div> 
+
+							<div class="formline">
+								<input type="password" class="pass" name="current_password" id="current_password" required="required"/>
+								<label for="current_password" class="oneline">Current Password*</label>
+								<i></i>
+							</div>
+
+							<div class="formline">
+								<input type="password" class="pass" name="new_password" id="new_password" required="required"/>
+								<label for="new_password" class="oneline">New Password*</label>
+								<i></i>
+							</div>
+
+							<div class="formline">
+								<input type="password" class="pass ignor" name="confirm_password2" id="confirm_password2" required="required"/>
+								<label for="confirm_password2" class="oneline">Confirm New Password*</label>
+								<i></i>
+							</div>
+
+							<div class="formline">
+								<a href="#passwordRecovery" class="btn-link top">Forgot password ?</a>
+							</div>
+
+							<div class="formline box-radio">
+								<input type="checkbox" name="show_password" id="show_password" class="show_password ignor" />
+								<label for="show_password" class="oneline">View Password</label>
+								<i></i>
+							</div> 
+
+							<div class="formline">
+								<p class="msg-oblig bottom">*At least 6 characters + number or symbol Password is case sensitive</p>
+							</div> 
+
+							<div class="formline">
+								<input type="password" class="digitscode" name="current_digits_code" id="current_digits_code" required="required"/>
+								<label for="current_digits_code" class="oneline">4 digits code*</label>
+								<i></i>
+							</div>
+
+							<div class="formline">
+								<input type="password" class="digitscode" name="new_digits_code" id="new_digits_code" required="required"/>
+								<label for="new_digits_code" class="oneline">New 4 digits code*</label>
+								<i></i>
+							</div>
+
+							<div class="formline">
+								<input type="password" class="digitscode ignor" name="confirm_digits_code2" id="confirm_digits_code2" maxlength="4" required="required"/>
+								<label for="confirm_digits_code2" class="oneline">Confirm new 4 digits code*</label>
+								<i></i>
+							</div>
+
+							<div class="formline box-radio">
+								<input type="checkbox" name="show_digits_code" id="show_digits_code" class="show_digits_code ignor" />
+								<label for="show_digits_code" class="oneline">View 4 digits code</label>
+								<i></i>
+							</div> 
+
+							<div class="formline">
+								<a href="#passwordRecovery" class="btn-link">Forgot 4 digits code ?</a>
+							</div>
+
+
+						</fieldset>
+
+					</div><!-- halfCol -->  
+
+					<div class="buttons edit middle"> 
+						<a href="#user/home" class="btn-scan"><span>Cancel</span></a>
+						<button type="submit" name="continue" class="ignore  btn-scan" value="Next">Save</button>
+					</div><!-- / .buttons --> 
+
+				</fieldset>
+
+			</form>
+		</div>
+
+		<div class="box-full">
+			<h2 class="title">My credit card(s)</h2>   
+			<ul class="list-adress scan-link2btn">  
+
+				<% _.each(cards, function(card, indx){  %>
+					<% if(card.type){  count++; %>
+						<li class="title left"><%= card.type %> card <%= count %>*</li>
+						<li>
+							<div class="push-adress">
+								<address> 
+									<%= card.card_number %> <br>		
+									<%= card.expire_date %>
+								</address>	
+							</div> 
+						</li> 
+					<%}%>
+				<% }) %> 
+				<li>
+					<a href="#user/mycreditcard/mycreditcart">Manage my credit cards</a>
+				</li>
+			</ul>
+		</div>
+
+
+		<div class="box-full">
+			<h2 class="title">My address(es)</h2> 
+			<ul class="list-adress scan-link2btn"> 
+				<% _.each(addresses, function(address, indx){j++;  %> 
+					<li class="title left"><span class="firstletter"><!-- Office --><%=  address.name %></span> <%= j %>*</li>
+					<li class="title">
+						<div class="push-adress">
+							<address>
+								<span class="firstletter"><%=  address.company %></span> <br>
+								<span class="firstletter"><%=  address.first_name %> <%=  address.last_name %></span> <br>
+								<%=  address.address1 %> <br>
+								<%=  address.zipCode %> - <%=  address.city %> <br>
+								<span class="firstletter"><%=  address.country %></span>						
+							</address>	 
+						</div> 
+					</li>  
+				<% }) %> 
+				<li>
+					<a  href="#user/myaddress/myadress">Manage my address(es)</a>
+				</li>
+			</ul>
+		</div> 
+		
+	</div><!-- halfCol -->  
+</div><!-- / .inner --> 

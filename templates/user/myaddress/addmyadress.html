@@ -1,0 +1,101 @@
+<%
+	var info = model.get("data");
+%>
+<div class="inner">
+	<form class="joinForm form" data-root="AddMyAdresses" novalidate="novalidate"> 
+		<fieldset>
+			<h2 class="title">Add My Address</h2>
+			<div class="halfCol">
+				<fieldset>
+					<div class="formline">
+						<input type="text" name="name" id="name" required="required" />				
+						<label for="name" class="oneline">Name (home, office...) </label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="first_name" id="first_name" class="firstletter" required="required" value="<%= info.first_name %>" />	
+						<label for="first_name" class="oneline">First name</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="last_name" id="last_name" class="firstletter" required="required" value="<%= info.last_name %>" />
+						<label for="last_name" class="oneline">Last name</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="company" id="company" class="firstletter" required="required" />			
+						<label for="company" class="oneline">Company</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="address1" id="address1" required="required" />			
+						<label for="address1" class="oneline">Address line 1*</label>
+						<i></i>
+					</div> 
+
+					<div class="formline">
+						<input type="text" name="address2" id="address2" required="required" />
+						<label for="address2" class="oneline">Address line 2**</label>
+						<i></i>
+					</div> 
+
+					<div class="formline">
+						<input type="text" name="city" id="city" class="firstletter" required="required" />		
+						<label for="city" class="oneline">Town/City</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="county" id="county" class="firstletter" required="required" />						
+						<label for="county" class="oneline">County (State/Province...)</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="zipCode" id="zipCode" required="required" />						
+						<label for="zipCode" class="oneline">Postal code</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="country" id="country" class="firstletter" required="required" />		
+						<label for="country" class="oneline">Country</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="phoneNumber" id="phoneNumber" required="required"/>		
+						<label for="phoneNumber" class="oneline">Phone Number</label>
+						<i></i>
+					</div>
+
+					<p class="msg-oblig"> 
+						*Street address, P.O, box, company name...<br>
+						**Apartment, suite, unit, building, floor, etc.
+					</p>  
+
+					<div class="formline box-radio">
+						<p>
+							<input type="checkbox" name="default" id="default" />						
+							<label for="default" class="oneline">Is it your default address ?</label>
+							<i></i>
+						</p>
+					</div>  
+				</fieldset>
+
+			</div><!-- halfCol --> 
+
+			<div class="buttons edit middle"> 
+				<a href="#user/myaddress/myadress" class="btn-scan"><span>Cancel</span></a>
+				<button type="submit" name="continue" class="ignore  btn-scan" value="Next">Save</button>
+			</div><!-- / .buttons --> 
+
+		</fieldset>
+
+	</form>
+
+</div><!-- / .inner --> 

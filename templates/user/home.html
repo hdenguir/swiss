@@ -1,0 +1,27 @@
+<%
+	var name = model.get("name"),
+		email =  model.get("email"),
+		photo =  model.get("photo");
+%>
+<div class="inner first home-scan">  
+	<div class="halfCol">  <!-- 
+		<h2 class="title">Welcome <%= name %></h2>  -->  
+		<h2 class="sub-title">Now I can...</h2>  
+		<div class="scnd scan"> 
+			<a href="#" class="btn-scan scancode">Scan & Buy</a> 	
+			<span class="or">or</span>
+			<ul class="list-links link2btn">
+				<li>
+					<a href="#user/myorders/myorders"> View my orders</a>
+				</li>
+				<li>
+					<a href="#user/mycreditcard/mycreditcart"> Manage my credit(s) card(s)</a>
+				</li>
+				<li>
+					<a href="#user/myaddress/myadress"> Manage my address(es)</a>
+				</li>
+			</ul> 
+		</div><!-- scan --> 
+		
+	</div><!-- halfCol -->  
+</div><!-- / .inner --> 

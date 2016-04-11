@@ -1,0 +1,123 @@
+<%
+	var etPrice           = model.get("etPrice"),
+		name              = model.get("name"),
+		currency          = model.get("currency"),
+		shippingAddressId = model.get("shippingAddressId"),
+		photo             = model.get("photo"),
+		shippingAddresses = model.get("shippingAddresses"), 
+		cards             = model.get("cards"),
+		cardId            = model.get("cardId"), 
+		eq                = model.get("eq"); 
+		
+%>
+<div class="inner first command">  
+	<div class="halfCol">  
+		<div class="scnd">
+			<h2 class="title">Confirm <br>command</h2>  
+
+				<div class="box"> 
+					<h2 class="sub-title"><%= name %> <!-- <span>Scan & Buy</span> --> </h2>
+					<!-- <p></p> -->
+
+					<% if(photo){ %>
+						<img src="<%= photo %>" alt="">
+					<% } %> 
+						<div class="total">
+							<div>
+								<span>Quantity</span> 
+
+								<p class="select">
+									<select name="qte" id="qte" required="required">
+										<% for(var i= 1; i<6;i++){ %>
+											<option value="<%= i %>" <% if(eq.quantity == i){ %> selected="selected" <%}%>><%= i %></option>
+										<%};%> 
+									</select>	
+								</p>  
+							</div>
+
+							<p class="large ttc">
+								<span>Price</span>								
+								<span>
+									<i>
+										<%= etPrice %>								
+									</i>
+									<%= currency %>								
+								</span>
+							</p>
+
+							<p class="large detail">
+								<span>Detail</span>								
+								<span><em></em></span>
+							</p>
+							<p class="large last ht">
+								<span>Price <small>(Excluding tax)</small></span>								
+								<span>
+									<i>
+										<%= etPrice %>								
+									</i>
+									<%= currency %>
+								</span>
+							</p>
+							<p class="large last tax">
+								<span>VAT</span>								
+								<span>
+									<i><%= etPrice*0.08 %></i> <%= currency %>
+								</span>
+							</p>
+							<p class="large last ttc">
+								<span>Price <small>(Including tax)</small></span>															
+								<span>
+									<i>
+										<%= etPrice %>								
+									</i>
+									<%= currency %>								
+								</span>
+							</p>
+						</div>
+				</div>
+
+			<ul class="list-adress"> 
+				<li class="title">Delivery Address</li>
+				<% _.each(shippingAddresses, function(address, indx){ %>
+
+					<% if(shippingAddressId == address.id){ %>
+				<li>
+					<div class="push-adress">
+						<address>
+							<%=address.name %> <br> 
+						</address>	
+					</div>
+				</li>
+					<%}%>
+				<% }); %> 
+				
+				<li class="separator-link">
+				 	<!-- <a href="#">> Change Delivery Address</a> -->
+				</li>
+				
+				<li class="title">Credit Card</li>
+
+				<% _.each(cards, function(card, indx){ %>
+
+					<% if(cardId == card.id){ %>
+						<li>
+							<div class="push-adress"> 
+								<%=card.type %> <br> 
+								<%=card.card_number %> <br>
+								<%=card.expire_date %>
+							</div>
+						</li>
+					<%}%>
+
+				<% }); %> 
+				<li class="separator-link">
+					<!-- <a href="#">> Change Credit Card</a> -->
+				</li>
+			</ul> 
+
+			<div class="scnd scan"> 
+				<a href="#user/home" class="btn-scan">Scan & Buy</a> 	 
+			</div>
+		</div>
+	</div><!-- halfCol -->  
+</div><!-- / .inner --> 

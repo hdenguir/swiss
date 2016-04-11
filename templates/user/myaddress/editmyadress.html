@@ -1,0 +1,102 @@
+<%
+	var myAdresses = model.get("addresses")[model.get("id")];
+
+
+%>
+
+<div class="inner">
+	<form class="joinForm form" data-root="EditMyAdresses" novalidate="novalidate"> 
+		<fieldset>
+			<h2 class="title">Edit my address</h2> 
+			<div class="halfCol">
+				<fieldset> 
+					<div class="formline">
+						<input type="text" name="name" id="name" required="required" value="<%= myAdresses.name %>" />						
+						<label for="name" class="oneline">Name (home, office...) </label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="first_name" id="first_name" required="required" class="firstletter" value="<%= myAdresses.first_name %>" />			
+						<label for="first_name" class="oneline">First name</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="last_name" id="last_name" required="required" class="firstletter" value="<%= myAdresses.last_name %>" />			
+						<label for="last_name" class="oneline">Last name</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="company" id="company" required="required" class="firstletter" value="<%= myAdresses.company %>" />			
+						<label for="company" class="oneline">Company</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="address1" id="address1" required="required" value="<%= myAdresses.address1 %>" />			
+						<label for="address1" class="oneline">Address line 1*</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="address2" id="address2" required="required" value="<%= myAdresses.address2 %>" />			
+						<label for="address2" class="oneline">Address line 2**</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="city" id="city" required="required" class="firstletter" value="<%= myAdresses.city %>" />						
+						<label for="city" class="oneline">Town/City</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="county" id="county" required="required" class="firstletter" value="<%= myAdresses.county %>" />						
+						<label for="county" class="oneline">County (State/Province...)</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="zipCode" id="zipCode" required="required" class="" value="<%= myAdresses.zipCode %>" />						
+						<label for="zipCode" class="oneline">Postal code</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="country" id="country" required="required" class="firstletter" value="<%= myAdresses.country %>" />						<label for="country" class="oneline">Country</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="phoneNumber" id="phoneNumber" required="required" value="<%= myAdresses.phoneNumber %>" />						
+						<label for="phoneNumber" class="oneline">Phone Number</label>
+						<i></i>
+					</div>
+					
+					<div class="formline box-radio two">
+						<p>
+							<input type="checkbox" name="default" id="default" <% if(myAdresses.default==1){ %> ckecked="checked" <%}%>  />
+							<label for="default" class="oneline">Is it your default address ?  </label>
+							<i></i>
+						</p>
+					</div>
+
+					<p class="msg-oblig">  
+						*Street address, P.O, box, company name...<br>
+						**Apartment, suite, unit, building, floor, etc.
+					</p> 
+
+			</div><!-- halfCol --> 
+
+			<div class="buttons edit middle"> 
+				<a href="#user/myaddress/myadress" class="btn-scan"><span>Cancel</span></a>
+				<button type="submit" name="continue" class="ignore  btn-scan" value="Next">Save</button>
+			</div><!-- / .buttons -->  
+
+		</fieldset>
+
+	</form>
+
+</div><!-- / .inner --> 

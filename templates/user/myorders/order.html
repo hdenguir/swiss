@@ -1,0 +1,102 @@
+<%
+	var id                = model.get("id"),
+		orders            = model.get("orders"),
+		order             = orders[id],
+		shippingadress    = order['shippingadress'];  
+%>
+
+<div class="inner first orders  <% if(model.get("loading")){ %> loading<%}%>">  
+	<div class="halfCol">  
+		<div class="scnd">
+			<h2 class="title">My order</h2> 
+
+			<ul class="list-adress fiche"> 
+					<% var product = order['products'][0]; %>
+					<% var dat = order['date'].substring(0,10); %>
+					<% var dateformat = dat.split("-"); %>
+					<li> 
+						<!-- <p>
+							<span><%= dateformat[2] + "/" + dateformat[1] + "/" + dateformat[0] %></span>						
+							<span><%= order['total_ttc'] %> <%= order['currency'] %></span>	 
+						</p> -->
+
+						<p class="img">
+							<% if(product['photo']){ %>
+								<img src="<%= product['photo'] %>" alt="<%= product['name'] %>">
+							<%}%>
+						</p>
+
+						<p class="product-title">
+							<span><%= product['name'] %></span>
+						</p>
+
+						<div class="product-info-title">
+							<p>
+								Quantité
+							</p>
+							<p>
+								<%= product['quantity'] %>
+							</p>
+							<p>
+								Price
+							</p>
+							<p>
+								<%= order['etPrice'] %><%= order['currency'] %>
+							</p> 
+						</div>
+
+						<div class="product-info">
+							<p>
+								PRODUCT : <%= product['name'] %>
+							</p>
+							<p>
+								SHOP : <%= order['storeName'] %>
+							</p>
+							<p>
+								SKAPE REF : <%= order['id'] %>
+							</p>
+							<p>
+								ORDER DATE : <%= order['date'] %>
+							</p>
+							<p>
+								DELIVERY : <%= order['deliveryTime'] %>
+							</p>
+
+							<p>
+								Archive : 
+								<% if(order['archive'] == 1){ %> 
+									<input type="checkbox" checked="checked" value="<%= order['id'] %>"> Yes
+								<%}else{%>
+									<input type="checkbox" value="<%= order['id'] %>"> Yes
+								<%}%>
+							</p>
+							<p>  
+								Adresse :    
+									<em class="firstletter"><%=  shippingadress.address %></em> -
+									<%=  shippingadress.zipCode %> <% if(shippingadress.zipCode){ %>- <%}%><%=  shippingadress.city %> -
+									<em class="firstletter"><%=  shippingadress.country %></em> 	     
+							</p> 
+						</div>
+
+						<div class="product-info-title">
+							<p>Total HT :</p>
+							<p><%= order['total_ht'] %> <%= order['currency'] %></p>
+
+							<p>Total TTC :</p>
+							<p class="tot"><%= order['total_ttc'] %> <%= order['currency'] %></p>
+						</div>
+
+						<p class="msg-oblig last">
+							If you have any question about this <br>order,
+							please <a href="#user/content/contact">contact us</a> 
+						</p>
+
+						<div class="buttons edit"> 
+							<a href="#user/myorders/myorders" class="btn-back">Back</a> 
+						</div><!-- / .buttons --> 
+
+					</li> 
+			</ul> 
+		</div>
+	</div><!-- halfCol -->  
+</div><!-- / .inner --> 

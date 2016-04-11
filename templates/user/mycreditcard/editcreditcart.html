@@ -1,0 +1,96 @@
+<%
+	var cards = model.get("cards")[model.get("id")];
+%>
+
+<div class="inner">
+
+	<form class="joinForm form" data-root="EditSecurityData" novalidate="novalidate"> 
+		<fieldset>
+			<h2 class="title">Edit my credit card</h2>
+
+			<div class="halfCol">
+
+				<fieldset>					
+					<div class="formline box-radio two"> 
+						<ul class="list-adress scan-link2btn">  
+							<li class="title left"><%= cards.type %></li>
+							<li class="sep">
+								<div class="push-adress">
+									<address> 		
+										<%= cards.card_number %>
+									</address>	
+								</div>
+							</li>
+						</ul>  
+					</div>
+
+					<div class="formline">
+						<input type="text" name="holder_name" id="holder_name" required="required" value="<%= cards.holder_name %>" />		 
+						<label for="holder_name" class="oneline">Cardholer’s Name*</label>
+						<i></i>
+					</div>
+					
+					<div class="select_two">
+						<div class="formline">
+							<p class="select">
+								<select name="month" id="month" required="required">
+									<option value="01" <% if(cards.expire_date.substring(0,2) == "01"){ %> selected="selected"<%}%>>01</option>
+									<option value="02" <% if(cards.expire_date.substring(0,2) == "02"){ %> selected="selected"<%}%>>02</option>
+									<option value="03" <% if(cards.expire_date.substring(0,2) == "03"){ %> selected="selected"<%}%>>03</option>
+									<option value="04" <% if(cards.expire_date.substring(0,2) == "04"){ %> selected="selected"<%}%>>04</option>
+									<option value="05" <% if(cards.expire_date.substring(0,2) == "05"){ %> selected="selected"<%}%>>05</option>
+									<option value="06" <% if(cards.expire_date.substring(0,2) == "06"){ %> selected="selected"<%}%>>06</option>
+									<option value="07" <% if(cards.expire_date.substring(0,2) == "07"){ %> selected="selected"<%}%>>07</option>
+									<option value="08" <% if(cards.expire_date.substring(0,2) == "08"){ %> selected="selected"<%}%>>08</option>
+									<option value="09" <% if(cards.expire_date.substring(0,2) == "09"){ %> selected="selected"<%}%>>09</option>
+									<option value="10" <% if(cards.expire_date.substring(0,2) == "10"){ %> selected="selected"<%}%>>10</option>
+									<option value="11" <% if(cards.expire_date.substring(0,2) == "11"){ %> selected="selected"<%}%>>11</option>
+									<option value="12" <% if(cards.expire_date.substring(0,2) == "12"){ %> selected="selected"<%}%>>12</option>
+								</select>
+							</p> 
+							<i></i>
+						</div>
+						<div class="formline">
+							<p class="select">
+								<select name="year" id="year" required="required">
+									<option value="16" <% if(cards.expire_date.substring(3,5) == "16"){ %> selected="selected"<%}%>>2016</option>
+									<option value="17" <% if(cards.expire_date.substring(3,5) == "17"){ %> selected="selected"<%}%>>2017</option>
+									<option value="18" <% if(cards.expire_date.substring(3,5) == "18"){ %> selected="selected"<%}%>>2018</option>
+									<option value="19" <% if(cards.expire_date.substring(3,5) == "19"){ %> selected="selected"<%}%>>2019</option>
+									<option value="20" <% if(cards.expire_date.substring(3,5) == "20"){ %> selected="selected"<%}%>>2020</option>
+									<option value="21" <% if(cards.expire_date.substring(3,5) == "21"){ %> selected="selected"<%}%>>2021</option>
+									<option value="22" <% if(cards.expire_date.substring(3,5) == "22"){ %> selected="selected"<%}%>>2022</option> 
+								</select>
+							</p>  
+							<i></i>
+						</div>
+					</div>
+
+					<!-- <div class="formline">
+						<input type="text" name="cvc" id="cvc" required="required" value="<%= cards.cvc %>" />						
+						<label for="cvc" class="oneline">Card Security Code</label>
+						<i></i>
+					</div> -->
+
+					<div class="formline box-radio two">
+						<p>
+							<input type="checkbox" name="default" id="default" <% if(cards.default==1){ %> ckecked="checked" <%}%>  />
+							<label for="default" class="oneline">Is it your default credit card ?  </label>
+							<i></i>
+						</p>
+					</div> 
+
+				</fieldset>
+
+			</div><!-- halfCol --> 
+
+			<div class="buttons edit middle"> 
+				<a href="#user/mycreditcard/mycreditcart" class="btn-scan"><span>Cancel</span></a>
+				<button type="submit" name="continue" class="ignore  btn-scan" value="Next">Save</button>
+			</div><!-- / .buttons --> 
+
+		</fieldset>
+
+	</form>
+
+</div><!-- / .inner --> 

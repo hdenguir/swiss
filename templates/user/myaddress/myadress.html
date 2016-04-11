@@ -1,0 +1,77 @@
+<%
+	var addresses = model.get("addresses"),
+		j = 0; 
+%>
+<div class="inner scan <% if(model.get("loading")){ %> loading<%}%>">  
+		<!-- <p>Not available for the demo</p> -->
+		<div class="halfCol"> 
+			<h2 class="title">Manage <br> my address(es)</h2> 
+		
+			<ul class="list-adress scan-link2btn"> 
+				<% if(addresses.length){%>
+				<% _.each(addresses, function(address, indx){j++;  %> 
+					<li class="title left"><span class="firstletter"><!-- Office --><%=  address.name %></span> <%= j %>*</li>
+					<li class="title">
+						<div class="push-adress">
+							<address>
+								<span class="firstletter"><%=  address.company %></span> <br>
+								<span class="firstletter"><%=  address.first_name %> <%=  address.last_name %></span> <br>
+								<%=  address.address1 %> <br>
+								<%=  address.zipCode %> - <%=  address.city %> <br>
+								<span class="firstletter"><%=  address.country %></span>
+							</address>	 
+						</div>
+
+						<div class="buttons edit"> 
+							<a href="#user/myaddress/editmyadress/<%= indx %>" class="btn-scan"> Edit this address  </a>
+							<a href="#user/myaddress/deletemyadress/<%= indx %>" class="btn-scan"> Delete this address</a>
+						</div>
+					</li>  
+				<% }) %> 
+				<% }else{%>
+					<li>Addresses not existe</li>
+				<% }%>
+
+				<!-- 
+				<li class="title">Address 1*</li>
+				<li class="title">
+					<div class="push-adress">
+						<address>
+							Laure DELAROCHE <br>
+							11 rue verte <br>
+							91210 - Draveil <br>
+							France <br>
+							06 85 95 75 82							
+						</address>	
+					</div><p class="msg-oblig">(*At least 6 characters + number or symbol Password is case sensitive.)</p>
+				
+					<div class="buttons edit"> 
+						<a href="#user/myaddress/editmyadress" class="btn-scan"> Edit this address  </a>
+						<a href="#user/myaddress/deletemyadress" class="btn-scan"> Delete this address</a>
+					</div>
+				</li> 
+				<li class="title">Address 2</li>
+				<li class="title">
+					<div class="push-adress">
+						<address>
+							Laure DELAROCHE <br>
+							11 rue verte <br>
+							91210 - Draveil <br>
+							France <br>
+							06 85 95 75 82							
+						</address>
+					</div> 
+					<p class="msg-oblig">(*At least 6 characters + number or symbol Password is case sensitive.)</p>
+				
+					<div class="buttons edit">
+						<a href="#user/myaddress/editmyadress" class="btn-scan"> Edit this address  </a> 
+						<a href="#user/myaddress/deletemyadress" class="btn-scan"> Delete this address</a>
+					</div>
+				</li> -->
+				<li class="add-new">
+					<a  href="#user/myaddress/addmyadress"> Add a new Address</a>
+				</li>
+			</ul>
+		
+		</div><!-- halfCol -->
+</div><!-- / .inner -->

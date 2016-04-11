@@ -1,0 +1,55 @@
+<%
+	var orders = model.get("orders"); 
+%>
+<div class="inner scan">  
+		<!-- <p>Not available for the demo</p>  -->
+		<h1 class="title">Contact-us</h1> 
+		
+		<div class="box-wysiwyg">  
+			<p>Please consult <a href="#user/content/help" class="btn-link">Help page</a> before using the contact form.</p> 
+		</div>
+
+
+	<form class="joinForm form" data-root="contactForm" novalidate="novalidate"> 
+		<fieldset> 
+			<div class="halfCol">
+				<fieldset>
+					<div class="formline sel box-radio">
+						<label for="message" class="oneline">SWI$CAN Reference*</label>
+						<p class="select">
+							<select name="ref" required="required">
+								<option value="">choose</option>
+									<% _.each(orders, function(order, indx){ %>     
+										<option value="<%= order['id'] %>"><%= order['id'] %></option>
+									<%});%> 
+							</select>
+						</p>
+
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="subject" id="subject" required="required" />						
+						<label for="subject" class="oneline">Subject</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<textarea name="message" id="message" required="required"></textarea>
+						<label for="message" class="oneline">Message*</label>
+						<i></i>
+					</div> 
+				</fieldset>
+
+			</div><!-- halfCol --> 
+
+
+			<div class="buttons edit middle"> 
+				<a href="#user/home" class="btn-scan"><span>Cancel</span></a>
+				<button type="submit" name="continue" class="ignore  btn-scan" value="Next">Send</button>
+			</div><!-- / .buttons --> 
+
+		</fieldset>
+
+	</form>
+</div><!-- / .inner -->  

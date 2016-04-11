@@ -1,0 +1,31 @@
+<%
+	var card = model.get("cards")[model.get("id")]; 
+	
+	if(model.get("cards").length == 0) { return false; }
+
+	if(typeof card == "undefined") { return false; } 
+%>
+<div class="inner scan">  
+		<!-- <p>Not available for the demo</p> -->
+		<div class="halfCol"> 
+			<h2 class="title">Delete <br> my credit card</h2> 
+			<ul class="list-adress"> 
+				<li class="title left"><%= card.type %></li>
+				<li>
+					<div class="push-adress">
+						<address> 
+							<%= card.card_number %> <br>
+							<%= card.expire_date %>
+						</address>	 
+					</div> 
+				</li>  
+				<li>
+					<div class="buttons edit middle"> 
+						<a href="#user/mycreditcard/mycreditcart" class="btn-scan"><span>Cancel</span></a>
+						<button type="submit" name="continue" class="ignore btn-scan delete" value="Next"><span>Delete</span></button>
+					</div><!-- / .buttons --> 
+				</li>
+			</ul>  
+		
+		</div><!-- halfCol -->
+</div><!-- / .inner -->

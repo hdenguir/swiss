@@ -1,0 +1,8 @@
+<ul> 
+	<% _.each(model.get('buttons'),function(button,i){ %>
+	<li class="item <%= button.id %><% if(1 == button.separator){ %> separator<% }; %>">
+		<a href="<%= button.route %>">
+			<%= button.label %></a>
+		</li>
+	<% }); %>
+</ul>

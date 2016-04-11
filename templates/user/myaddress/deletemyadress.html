@@ -1,0 +1,33 @@
+<%
+	var address = model.get("addresses")[model.get("id")];
+	
+	if(typeof address == "undefined") { return false; } 
+%>
+<div class="inner scan">  
+		<!-- <p>Not available for the demo</p> -->
+		<div class="halfCol"> 
+			<h2 class="title">Delete <br> my address</h2> 
+		
+			<ul class="list-adress"> 
+				<li class="title left">Office</li>
+				<li class="title">
+					<div class="push-adress">
+						<address>
+							<%=  address.first_name %> <%=  address.last_name %> <br>
+							<%=  address.address1 %> <br>
+							<%=  address.company %> <br>
+							<%=  address.zipCode %> - <%=  address.city %> <br>
+							<%=  address.country %> 						
+						</address>	 
+					</div> 
+				</li>
+				<li>
+					<div class="buttons edit middle"> 
+						<a href="#user/myaddress/myadress" class="btn-scan"><span>Cancel</span></a>
+						<button type="submit" name="continue" class="ignore btn-scan delete"  value="Next"><span>Delete</span></button>
+					</div><!-- / .buttons --> 
+				</li>
+			</ul>
+		
+		</div><!-- halfCol -->
+</div><!-- / .inner -->

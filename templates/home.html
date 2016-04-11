@@ -1,0 +1,41 @@
+<%
+	var token = Utils.storage.get('token');  
+
+	if(token==null){
+%>
+	<div class="inner auth"> 
+
+		<div class="wrapper">
+			<form name="logForm" data-root="logForm" class="logForm form" novalidate="novalidate">
+				<fieldset>
+					<div class="formline">
+						<input type="text" name="username" id="username"  required="required" value="jean-francois.pillet@efficience.com" />					
+						<label for="username" class="oneline">E-mail</label>
+						<i></i>
+					</div>
+					
+					<div class="formline">
+						<input type="password" name="password" id="password"  required="required" value="swiss123"/>	
+						<label for="password" class="oneline">Password</label>
+						<i></i>
+					</div>
+
+				</fieldset>
+
+				<div class="buttons">
+					<input type="submit" name="signin" class="signin btn-submit" value=">" />
+				</div>
+
+			</form><!-- / .form -->  
+			
+			<ul class="list-links link2btn">
+				<li>
+					<a href="#join/step1"> Create account</a>
+				</li>
+				<li>
+					<a href="#passwordRecovery"> Forgot password</a>
+				</li>
+			</ul>
+		</div> <!-- / .wrapper -->
+	</div> <!-- / .inner -->
+<% } %>

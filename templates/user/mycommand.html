@@ -1,0 +1,133 @@
+<%
+	var prod = model.attributes; 
+%>
+<div class="inner first command">  
+	<div class="halfCol">  
+		<form class="form large payForm" data-root="formPay" novalidate="novalidate">
+			<div class="scnd">
+				<h2 class="title">My order</h2>
+				<div class="box"> 
+					<h2 class="sub-title"><%= prod.name %> <!-- <span>Scan & Buy</span> --> </h2>
+					<!-- <p></p> -->
+
+					<% if(prod.photo){ %>
+						<img src="<%= prod.photo %>" alt="">
+					<% } %> 
+						<div class="total">
+							<div>
+								<span>Quantity</span> 
+
+								<p class="select">
+									<select name="qte" id="qte" required="required">
+										<% for(var i= 1; i<6;i++){ %>
+											<option value="<%= i %>"><%= i %></option>
+										<%};%> 
+									</select>	
+								</p>  
+							</div>
+
+							<p class="large ttc">
+								<span>Price</span>								
+								<span>
+									<i>
+										<%= prod.atiPrice %>								
+									</i>
+									<%= prod.currency %>								
+								</span>
+							</p>
+
+							<p class="large detail">
+								<span>Detail</span>								
+								<span><em></em></span>
+							</p>
+							<p class="large last ht">
+								<span>Price <small>(Excluding tax)</small></span>								
+								<span>
+									<i>
+										<%= prod.atiPrice %>								
+									</i>
+									<%= prod.currency %>
+								</span>
+							</p>
+							<p class="large last tax">
+								<span>VAT</span>								
+								<span>
+									<i><%= prod.etPrice*0.08 %></i> <%= prod.currency %>
+								</span>
+							</p>
+							<p class="large last ttc">
+								<span>Price <small>(Including tax)</small></span>															
+								<span>
+									<i>
+										<%= prod.atiPrice %>								
+									</i>
+									<%= prod.currency %>								
+								</span>
+							</p>
+						</div>
+				</div>
+
+				<ul class="list-adress">
+					<li class="title">Delivery Address</li>
+					<li>
+						<div class="formline">
+							<p class="select">
+								<select name="address" id="address" class="address">  
+									<!-- <option value="">Select address</option> -->
+									<% _.each(prod.shippingAddresses, function(address, indx){ %>
+										<option value="<%= address.id %>"  id="<%=address.id %>"  data-id="<%=address.id %>"  data-tax="<%= (address.tax/100) %>" data-atiprice="<%=address.atiPrice %>" data-shippingfees="<%=address.shippingFees.replace(",",".") %>"> 
+											<%=address.name %> <br>
+											<%=address.address %> <br>
+											<%=address.zipCode %> - <%=address.city %>  <br> 
+											<%=address.country %>
+										</option> 
+									<% }); %>
+								</select>
+							</p>	 
+							<i></i>							
+						</div>
+					</li>
+
+					<li class="separator-link">
+					 	<a href="#user/myaddress/myadress" class="btn-add">> Change Delivery Address</a>
+					 </li>
+
+					<li class="title">Credit Card</li> 
+					
+					<li>
+						<div class="formline">
+							<p class="select">
+								<select name="payment" id="payment" class="payment"> 
+									<!-- <option value="">Select payment</option> -->
+									<% _.each(prod.cards, function(card, indx){ %>
+										<option value="<%=card.type %>"  id="paiement-<%=card.id %>" class="paiement" data-id="<%=card.id %>">
+											<%=card.type %> : <%=card.card_number %> - <%=card.expire_date %>
+										</option>
+									<% }); %> 
+								</select>  
+							</p>
+							<i></i>						
+						</div>
+					</li>
+
+					<li class="separator-link">
+						<a href="#user/mycreditcard/mycreditcart" class="btn-add">> Change Credit Card</a>
+					</li>
+				
+					<li class="separator-link"></li>
+					<li class="title">Digits code</li> 
+					<li>
+						<div class="formline">  
+							<input type="password" id="digits_code" class="digitscode" name="digits_code" required="required" maxlength="4">
+							<label for="digits_code" class="digits">4 digits code</label>
+							<i></i>
+						</div>
+					</li> 
+				</ul>
+				<!-- <a href="#user/myorders1" class="btn-submit">Buy now !</a> -->
+				<input type="submit" class="btn-submit" value="Buy now !">
+			</div>
+
+		</form>
+	</div><!-- halfCol -->  
+</div><!-- / .inner --> 

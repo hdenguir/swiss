@@ -1,0 +1,37 @@
+<% 
+	var cards = model.get("cards"),
+		$i = 0;
+%>
+<div class="inner scan <% if(model.get("loading")){ %> loading<%}%>">  
+		<!-- <p>Not available for the demo</p> -->
+		<div class="halfCol"> 
+			<h2 class="title">Manage <br>my credit(s) card(s)</h2> 
+		
+			<ul class="list-adress scan-link2btn"> 
+				<% if(cards.length>0){%>
+					<% _.each(cards, function(card, indx){ $i++;  %> 
+						<li class="title left"><%= card.type %></li>
+						<li class="sep">
+							<div class="push-adress">
+								<address>
+									<%= card.card_number %> <br>		
+									<%= card.expire_date %>
+								</address>	
+							</div> 
+
+							<div class="buttons edit">
+								<a href="#user/mycreditcard/editcreditcart/<%= indx %>" class="btn-scan"> Edit this card  </a> 
+								<a href="#user/mycreditcard/deletecreditcart/<%= indx %>" class="btn-scan"> Delete this card</a>
+							</div> 
+						</li>  
+					<% }) %>
+				<% }else{%>
+					<li>Cards not existe</li>
+				<% }%>
+				<li class="add-new">
+					<a href="#user/mycreditcard/addcreditcart"> Add a new Card</a>
+				</li>
+			</ul>
+		
+		</div><!-- halfCol -->
+</div><!-- / .inner -->

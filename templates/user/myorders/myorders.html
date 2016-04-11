@@ -1,0 +1,49 @@
+<%
+	var orders = model.get("orders"),
+		sortBy = _.sortBy(orders, function(o) { return o.date.split(' ')[0]; }),
+		list   = sortBy.reverse(); 
+%>
+<div class="inner first orders <% if(model.get("loading")){ %> loading<%}%>">  
+	<div class="halfCol">  
+		<div class="scnd">
+			<h2 class="title">My Orders</h2> 
+			<div class="box-full">
+				<h3 class="sub-title two">Orders</h3> 
+				<ul class="list-adress ords">
+					<% _.each(list, function(order, indx){ %> 
+						<% var prod = order['products'][0]; %>
+						<% var dat = order['date'].substring(0,10); %>
+						<% var dateformat = dat.split("-"); %>
+						<% 	if(order['archive'] == 0){ %>
+							<li>
+								<a class="head" href="#user/myorders/order/<%= indx %>">
+									<span><%= dateformat[2] + "/" + dateformat[1] + "/" + dateformat[0] %></span>
+									<span><%= order.total_ttc %> <%= order.currency %></span>						
+								</a> 
+							</li>
+						<%}%> 
+					<%});%> 
+				</ul> 
+			</div>
+
+			<div class="box-full">
+				<h3 class="sub-title two">Orders history</h3> 
+				<ul class="list-adress ords">
+					<% _.each(list, function(order, indx){ %> 
+						<% var prod = order['products'][0]; %>
+						<% var dat = order['date'].substring(0,10); %>
+						<% var dateformat = dat.split("-"); %>
+						<% 	if(order['archive'] == 1){ %>
+							<li>
+								<a class="head" href="#user/myorders/order/<%= indx %>">
+									<span><%= dateformat[2] + "/" + dateformat[1] + "/" + dateformat[0] %></span>
+									<span><%= order.total_ttc %> <%= order.currency %></span>						
+								</a> 
+							</li>
+						<%}%> 
+					<%});%> 
+				</ul> 
+			</div>
+		</div>
+	</div><!-- halfCol -->  
+</div><!-- / .inner --> 

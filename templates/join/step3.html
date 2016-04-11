@@ -1,0 +1,99 @@
+﻿<%
+	var securityData = model.get('securityData'); 
+%> 
+<div class="inner register">
+
+	<form class="joinForm form" data-root="securityData" novalidate="novalidate">
+		<p class="sub-title">Create account 3/3</p>
+		<fieldset>
+			<h2 class="title">My Credit Card</h2>
+
+			<div class="halfCol">
+
+				<fieldset>					
+					<div class="formline box-radio two">
+						<p class="caption">Credit Card type :</p>
+						<p>
+							<input type="radio" name="type" id="american-express" value="AMERICAN EXPRESS" placeholder="AMERICAN EXPRESS" required="required" <% if(securityData.type == "AMERICAN EXPRESS"){%> checked="checked" <%}%> />
+							<label for="american-express">American Express</label>
+							<i></i>
+						</p>
+
+						<p>
+							<input type="radio" name="type" id="mastercard" placeholder="MASTERCARD" value="MASTERCARD" required="required" <% if(securityData.type == "MASTERCARD"){%> checked="checked" <%}%> />					
+							<label for="mastercard">Mastercard</label>
+						</p>
+
+						<p>
+							<input type="radio" name="type" id="visa" placeholder="VISA" value="VISA" required="required" <% if(securityData.type == "VISA"){%> checked="checked" <%}%> />							
+							<label for="visa">Visa</label>
+						</p>
+
+					</div>
+
+					<div class="formline">
+						<input type="text" name="card_number" id="card_number" required="required" class="" value="<%= securityData.card_number %>" />						
+						<label for="card_number" class="oneline">Card Number</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="holder_name" class="maj" id="holder_name" required="required" value="<%= securityData.holder_name %>" />						
+						<label for="holder_name" class="oneline">Cardholer’s Name*</label>
+						<i></i>
+					</div>
+					
+					<div class="select_two">
+						<div class="formline">
+							<p class="select">
+								<select name="month" id="month" required="required">
+									<option value="">Select month</option> 
+										<% for(var i= 01; i<13;i++){ %>
+											<% if(i < 10){ i = "0"+i } %>
+											<option value="<%= i %>" <% if(securityData.expire_date.split('/')[0] == i){ %> selected="selected" <%}%>><%= i %></option>
+										<%};%> 
+								</select>
+							</p> 
+							<i></i>
+						</div>
+						<div class="formline">
+							<p class="select">
+								<select name="year" id="year" required="required">
+									<option value="">Select year</option>
+										<% for(var j= 2015; j<2021;j++){ %>
+											<% if(j < 10){ j = "0"+j } %>
+											<option value="<%= j %>" <% if(securityData.expire_date.split('/')[1] == j){ %> selected="selected" <%}%>><%= j %></option>
+										<%};%> 
+								</select>
+							</p>  
+							<i></i>
+						</div>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="cvc" id="cvc" required="required" class="" maxlength="3" value="<%= securityData.cvc %>" />						
+						<label for="cvc" class="oneline">Card Security Code</label>
+						<i></i>
+					</div>
+
+					<p class="msg-oblig">
+						*As it appears on the card
+					</p> 
+					<p class="msg-oblig">  
+						You can manage credit card(s) (add, update or delete) in « Manage Credit(s) card(s) » section
+					</p> 
+
+				</fieldset>
+
+			</div><!-- halfCol -->  
+
+			<div class="buttons edit middle"> 
+				<a href="#join/step2" class="btn-scan"><span>Cancel</span></a>
+				<button type="submit" name="continue" class="ignore  btn-scan" value="Next">Save</button>
+			</div><!-- / .buttons --> 
+
+		</fieldset>
+
+	</form>
+
+</div><!-- / .inner --> 

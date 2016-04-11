@@ -1,0 +1,99 @@
+<div class="inner">
+
+	<form class="joinForm form" data-root="AddSecurityData" novalidate="novalidate"> 
+		<fieldset>
+			<h2 class="title">Add My Credit Card</h2>
+
+			<div class="halfCol">
+
+				<fieldset>					
+					<div class="formline box-radio two">
+						<p class="caption">Credit Card type :</p>
+						<p>
+							<input type="radio" name="type" id="american-express" value="American Express" placeholder="American Express" required="required" />
+							<label for="american-express">American Express</label>
+							<i></i>
+						</p>
+
+						<p>
+							<input type="radio" name="type" id="mastercard" placeholder="Mastercard" value="Mastercard" required="required" />					
+							<label for="mastercard">Mastercard</label>
+						</p>
+
+						<p>
+							<input type="radio" name="type" id="visa" placeholder="Visa" value="Visa" required="required" />							
+							<label for="visa">Visa</label>
+						</p>
+
+					</div>
+
+					<div class="formline">
+						<input type="text" name="card_number" id="card_number" required="required" />						
+						<label for="card_number" class="oneline">Card Number</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="holder_name" id="holder_name" required="required" />		 
+						<label for="holder_name" class="oneline">Cardholer’s Name*</label>
+						<i></i>
+					</div>
+					
+					<div class="select_two">
+						<div class="formline">
+							<p class="select">
+								<select name="month" id="month" required="required">
+										<option value="">Month</option>
+										<% for(var i= 01; i<13;i++){ %>
+											<% if(i < 10){ i = "0"+i } %>
+											<option value="<%= i %>"><%= i %></option>
+										<%};%> 
+								</select>
+							</p> 
+							<i></i>
+						</div>
+						<div class="formline">
+							<p class="select">
+								<select name="year" id="year" required="required">
+									<option value="">Year</option>
+									<% for(var i= 15; i<20;i++){ %>
+										<option value="<%= i %>">20<%= i %></option>
+									<%};%>
+								</select>
+							</p>  
+							<i></i>
+						</div>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="cvc" id="cvc" required="required" />						
+						<label for="cvc" class="oneline">Card Security Code</label>
+						<i></i>
+					</div>
+
+					<div class="formline box-radio two">
+						<p>
+							<input type="checkbox" name="default" id="default" />						
+							<label for="default" class="oneline">Is it your default credit card ?  </label>
+							<i></i>
+						</p>
+					</div>
+
+					<p class="msg-oblig">
+						*As it appears on the card
+					</p>
+
+				</fieldset>
+
+			</div><!-- halfCol --> 
+
+			<div class="buttons edit middle"> 
+				<a href="#user/mycreditcard/mycreditcart" class="btn-scan"><span>Cancel</span></a>
+				<button type="submit" name="continue" class="ignore  btn-scan" value="Next">Save</button>
+			</div><!-- / .buttons --> 
+
+		</fieldset>
+
+	</form>
+
+</div><!-- / .inner --> 

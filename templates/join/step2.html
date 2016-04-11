@@ -1,0 +1,184 @@
+<%
+	var myAdresses = model.get('ShippingAddresses'),
+	    personalData = model.get('personalData'); 
+%>
+
+<div class="inner register">
+	<form class="joinForm form" data-root="ShippingAddresses" novalidate="novalidate">
+		<p class="sub-title">Create account 2/3</p>
+		<fieldset>
+			<h2 class="title">My contact details</h2>
+			<div class="halfCol">
+				<fieldset> 
+					<div class="formline">
+						<input type="text" name="name" id="name" required="required" value="<%= myAdresses.name %>" />						
+						<label for="name" class="oneline">Name (home, office...) </label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="first_name" id="first_name" required="required" class="firstletter" value="<%= personalData.first_name %>" />			
+						<label for="first_name" class="oneline">First name</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="last_name" id="last_name" required="required" class="firstletter" value="<%= personalData.last_name %>" />			
+						<label for="last_name" class="oneline">Last name</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="company" id="company" required="required" class="firstletter" value="<%= myAdresses.company %>" />			
+						<label for="company" class="oneline">Company</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="address1" id="address1" required="required" value="<%= myAdresses.address1 %>" />			
+						<label for="address1" class="oneline">Address line 1*</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="address2" id="address2" value="<%= myAdresses.address2 %>" />			
+						<label for="address2" class="oneline">Address line 2**</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="city" id="city" required="required" class="firstletter" value="<%= myAdresses.city %>" />						
+						<label for="city" class="oneline">Town/City</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="county" id="county" class="firstletter" value="<%= myAdresses.county %>" />						
+						<label for="county" class="oneline">County (State/Province...)</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="zipCode" id="zipCode" required="required" class="" value="<%= myAdresses.zipCode %>" />						
+						<label for="zipCode" class="oneline">Postal code</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="country" id="country" required="required" class="firstletter" value="<%= myAdresses.country %>" />						<label for="country" class="oneline">Country</label>
+						<i></i>
+					</div>
+
+					<div class="formline">
+						<input type="text" name="phoneNumber" id="phoneNumber" required="required" value="<%= myAdresses.phoneNumber %>" />						
+						<label for="phoneNumber" class="oneline">Phone Number</label>
+						<i></i>
+					</div>
+
+					<p class="msg-oblig">  
+						*Street address, P.O, box, company name...<br>
+						**Apartment, suite, unit, building, floor, etc.
+					</p> 
+
+					<p class="msg-oblig">  
+						You can manage address(es) (add, update or delete) in  « Manage Address » section 
+					</p> 
+
+
+					<div class="formline box-radio">
+						<p class="caption">Billing details :</p>
+						<p>
+							<input type="radio" name="billing" id="billing_one" required="required" value="0" <% if(myAdresses.billing == 0){%> checked="checked" <%}%> />				
+							<label for="billing_one">Use a saved address</label>
+							<i></i>							
+						</p>
+
+						<p>
+							<input type="radio" name="billing" id="billing_two" required="required"  value="1" <% if(myAdresses.billing == 1){%> checked="checked" <%}%> />		
+							<label for="billing_two">Or add an other  address</label>
+							<i></i>							
+						</p>
+					</div>
+
+					<div class="new_address <% if(myAdresses.new_name){ %> show<%}%>">  
+						<div class="formline">
+							<input type="text" name="new_name" id="new_name" required="required" value="<%= myAdresses.new_name %>" />						
+							<label for="new_name" class="oneline">Name (home, office...) </label>
+							<i></i>
+						</div>
+
+						<div class="formline">
+							<input type="text" name="new_first_name" id="new_first_name" required="required" value="<%= myAdresses.new_first_name %>" />			
+							<label for="new_first_name" class="oneline">First name</label>
+							<i></i>
+						</div>
+
+						<div class="formline">
+							<input type="text" name="new_last_name" id="new_last_name" required="required" value="<%= myAdresses.new_last_name %>" />			
+							<label for="new_last_name" class="oneline">Last name</label>
+							<i></i>
+						</div>
+
+						<div class="formline">
+							<input type="text" name="new_company" id="new_company" required="required" value="<%= myAdresses.new_company %>" />			
+							<label for="new_company" class="oneline">Company</label>
+							<i></i>
+						</div>
+
+						<div class="formline">
+							<input type="text" name="new_address1" id="new_address1" required="required" value="<%= myAdresses.new_address1 %>"  />			
+							<label for="new_address1" class="oneline">Address line 1*</label>
+							<i></i>
+						</div> 
+
+						<div class="formline">
+							<input type="text" name="new_address2" id="new_address2" required="required" value="<%= myAdresses.new_address2 %>"  />			
+							<label for="new_address2" class="oneline">Address line 2**</label>
+							<i></i>
+						</div>
+
+						<div class="formline">
+							<input type="text" name="new_city" id="new_city" required="required" value="<%= myAdresses.new_city %>" />						
+							<label for="new_city" class="oneline">Town/City</label>
+							<i></i>
+						</div>
+
+						<div class="formline">
+							<input type="text" name="new_county" id="new_county" required="required" value="<%= myAdresses.new_county %>" />						
+							<label for="new_county" class="oneline">County (State/Province...)</label>
+							<i></i>
+						</div>
+
+						<div class="formline">
+							<input type="text" name="new_zipCode" id="new_zipCode" required="required" value="<%= myAdresses.new_zipCode %>" />						
+							<label for="new_zipCode" class="oneline">Postal code</label>
+							<i></i>
+						</div>
+
+						<div class="formline">
+							<input type="text" name="new_country" id="new_country" required="required" value="<%= myAdresses.new_country %>" />						
+							<label for="new_country" class="oneline">Country</label>
+							<i></i>
+						</div>
+
+						<div class="formline">
+							<input type="text" name="new_phoneNumber" id="new_phoneNumber" required="required" value="<%= myAdresses.new_phoneNumber %>" />						
+							<label for="new_phoneNumber" class="oneline">Phone Number</label>
+							<i></i>
+						</div>
+					</div> 
+				</fieldset>
+
+			</div><!-- halfCol -->    
+
+			<div class="buttons edit middle"> <!-- 
+				<a href="#join/step1" class="btn-scan"><span>Cancel</span></a>
+				<button type="submit" name="continue" class="ignore  btn-scan" value="Next">Save</button> -->
+				<button type="submit" name="continue" class="ignore  btn-submit" value=">">></button>
+			</div><!-- / .buttons --> 
+
+		</fieldset>
+
+	</form>
+
+</div><!-- / .inner --> 
