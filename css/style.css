@@ -1807,13 +1807,14 @@ p.product-title span {
 /* line 1, ../src/sass/layout/_nav.scss */
 nav,
 .nav {
+  border: 2.5px solid #fff;
   background: #2d2e2e;
   bottom: 0;
   left: 0;
   padding: 41px 35px 0;
   position: absolute;
   right: 0;
-  top: 69px;
+  top: 43px;
   z-index: 9999;
   margin-left: 0;
   width: 100%;
@@ -1823,40 +1824,46 @@ nav,
   transition: margin-left 0.2s;
 }
 /* line 17, ../src/sass/layout/_nav.scss */
+nav.red,
+.nav.red {
+  color: #e9b2af;
+  background: #fc0d13;
+}
+/* line 22, ../src/sass/layout/_nav.scss */
 nav.empty,
 .nav.empty {
   margin-left: -100%;
 }
-/* line 21, ../src/sass/layout/_nav.scss */
+/* line 26, ../src/sass/layout/_nav.scss */
 nav ul,
 .nav ul {
   position: relative;
   z-index: 99999;
 }
-/* line 25, ../src/sass/layout/_nav.scss */
+/* line 30, ../src/sass/layout/_nav.scss */
 nav ul li,
 .nav ul li {
   text-align: left;
 }
-/* line 28, ../src/sass/layout/_nav.scss */
+/* line 33, ../src/sass/layout/_nav.scss */
 nav ul li.separator,
 .nav ul li.separator {
   margin-top: 17px;
   padding: 17px 0 0;
 }
-/* line 35, ../src/sass/layout/_nav.scss */
+/* line 40, ../src/sass/layout/_nav.scss */
 nav ul li.active a,
 .nav ul li.active a {
   color: #fff;
 }
-/* line 40, ../src/sass/layout/_nav.scss */
+/* line 45, ../src/sass/layout/_nav.scss */
 nav ul li a,
 .nav ul li a {
-  font-family: 'ralewayregular', sans-serif;
+  font-family: 'ralewaylight';
   color: #ccc;
   display: inline-block;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
   padding: 6px 0;
 }
 
