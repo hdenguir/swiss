@@ -1694,17 +1694,18 @@ p.product-title span {
 /* line 21, ../src/sass/layout/_header.scss */
 #header.hp .logo {
   background: none;
+  padding-top: 29px;
 }
-/* line 25, ../src/sass/layout/_header.scss */
+/* line 26, ../src/sass/layout/_header.scss */
 #header.hp h2.welcome {
   height: 43px;
   visibility: visible;
 }
-/* line 31, ../src/sass/layout/_header.scss */
+/* line 32, ../src/sass/layout/_header.scss */
 #header .leftButtonsContainer {
   left: 11px;
 }
-/* line 35, ../src/sass/layout/_header.scss */
+/* line 36, ../src/sass/layout/_header.scss */
 #header .leftButtonsContainer,
 #header .rightButtonsContainer {
   height: 27px;
@@ -1716,18 +1717,19 @@ p.product-title span {
   text-decoration: none;
   top: 50%;
 }
-/* line 48, ../src/sass/layout/_header.scss */
+/* line 49, ../src/sass/layout/_header.scss */
 #header .rightButtonsContainer {
   right: 11px;
   padding: 3px 5px;
 }
-/* line 49, ../src/sass/layout/_header.scss */
+/* line 50, ../src/sass/layout/_header.scss */
 #header .rightButton {
   height: 21px;
   width: 18px;
   background-image: url('../images/sprites-s44c0e06d69.png');
   background-position: 0 -411px;
   background-repeat: no-repeat;
+  height: 22px;
   display: block;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
@@ -1741,7 +1743,7 @@ p.product-title span {
     background-size: 146px auto;
   }
 }
-/* line 55, ../src/sass/layout/_header.scss */
+/* line 57, ../src/sass/layout/_header.scss */
 #header .infos {
   height: 14px;
   width: 19px;
@@ -1764,20 +1766,20 @@ p.product-title span {
   }
 }
 
-/* line 63, ../src/sass/layout/_header.scss */
+/* line 65, ../src/sass/layout/_header.scss */
 .logo {
   color: #fff;
   background: #fff;
   font-weight: 300;
   font-size: 15px;
-  padding-top: 29px;
+  padding-top: 15px;
   position: absolute;
   text-align: center;
   z-index: 1;
   left: 0;
   right: 0;
 }
-/* line 73, ../src/sass/layout/_header.scss */
+/* line 75, ../src/sass/layout/_header.scss */
 .logo span {
   height: 66px;
   width: 147px;
