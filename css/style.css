@@ -900,7 +900,7 @@ p.product-title span {
   border: 1px dashed #333333;
   display: block;
   padding: 16px 10px;
-  float: none;
+  float: none !important;
 }
 
 /* line 614, ../src/sass/base/_base.scss */
