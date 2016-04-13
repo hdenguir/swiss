@@ -59,13 +59,7 @@ define([
 
 			$("p.ttc i").text( parseFloat(ttc).toFixed(2) ); 
 			$("p.ht i ").text( parseFloat(ht).toFixed(2) ); 
-			$("p.tax i").text( parseFloat(tax).toFixed(2) ); 
-
-			Utils.popin.open({ data:{ title:'Success', content: "Your order has been received." } });
-			
-			setTimeout(function(){
-				Utils.router.navigate('user/myorders/myorders',{ trigger:true });
-			},1500); 
+			$("p.tax i").text( parseFloat(tax).toFixed(2) );  
 		}
 
 	});
