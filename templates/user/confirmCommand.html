@@ -16,63 +16,70 @@
 			<h2 class="title">Confirm <br>command</h2>  
 
 				<div class="box"> 
-					<h2 class="sub-title"><%= name %> <!-- <span>Scan & Buy</span> --> </h2>
+					<!-- <h2 class="sub-title"><%= name %> </h2> -->
 					<!-- <p></p> -->
+					<p class="img">
+						<% if(photo){ %>
+							<img src="<%= photo %>" alt="">
+						<% } %> 
+					</p>
+					<p class="product-title">
+						<span><%= name %></span>
+					</p>
 
-					<% if(photo){ %>
-						<img src="<%= photo %>" alt="">
-					<% } %> 
-						<div class="total">
-							<div>
-								<span>Quantity</span> 
+						<div class="product-info-title">
+							<p>
+								Quantité
+							</p>
+							<p class="select">
+								<select name="qte" id="qte" required="required">
+									<% for(var i= 1; i<6;i++){ %>
+										<option value="<%= i %>" <% if(eq.quantity == i){ %> selected="selected" <%}%>><%= i %></option>
+									<%};%> 
+								</select>		
+							</p> 
+							<p>
+								Price
+							</p>
+							<p>
+								<%=  etPrice %><%= currency %>
+							</p> 
+						</div>
 
-								<p class="select">
-									<select name="qte" id="qte" required="required">
-										<% for(var i= 1; i<6;i++){ %>
-											<option value="<%= i %>" <% if(eq.quantity == i){ %> selected="selected" <%}%>><%= i %></option>
-										<%};%> 
-									</select>	
-								</p>  
+
+
+						<div class="total"> 
+
+							<div class="product-info">
+								<p class="large detail">
+									<span>Detail</span>								
+									<span><em></em></span>
+								</p>
+								<p class="large last ht">
+									<span>Price <small>(Excluding tax)</small></span>								
+									<span>
+										<i>
+											<%= etPrice %>								
+										</i>
+										<%= currency %>
+									</span>
+								</p>
+								<p class="large last tax">
+									<span>VAT</span>								
+									<span>
+										<i><%= etPrice*0.08 %></i> <%= currency %>
+									</span>
+								</p>
+								<p class="large last ttc">
+									<span>Price <small>(Including tax)</small></span>															
+									<span>
+										<i>
+											<%= etPrice %>								
+										</i>
+										<%= currency %>								
+									</span>
+								</p>
 							</div>
-
-							<p class="large ttc">
-								<span>Price</span>								
-								<span>
-									<i>
-										<%= etPrice %>								
-									</i>
-									<%= currency %>								
-								</span>
-							</p>
-
-							<p class="large detail">
-								<span>Detail</span>								
-								<span><em></em></span>
-							</p>
-							<p class="large last ht">
-								<span>Price <small>(Excluding tax)</small></span>								
-								<span>
-									<i>
-										<%= etPrice %>								
-									</i>
-									<%= currency %>
-								</span>
-							</p>
-							<p class="large last tax">
-								<span>VAT</span>								
-								<span>
-									<i><%= etPrice*0.08 %></i> <%= currency %>
-								</span>
-							</p>
-							<p class="large last ttc">
-								<span>Price <small>(Including tax)</small></span>															
-								<span>
-									<i>
-										<%= etPrice %>								
-									</i>
-									<%= currency %>								
-								</span>
-							</p>
 						</div>
 				</div>
 
