@@ -1008,20 +1008,20 @@ p.product-title span {
   display: inline-block !important;
 }
 
-/* line 701, ../src/sass/base/_base.scss */
+/* line 702, ../src/sass/base/_base.scss */
 .buttons.twice {
   overflow: hidden;
 }
-/* line 704, ../src/sass/base/_base.scss */
+/* line 705, ../src/sass/base/_base.scss */
 .buttons.twice.large span {
   color: white;
   width: 200px;
 }
-/* line 707, ../src/sass/base/_base.scss */
+/* line 708, ../src/sass/base/_base.scss */
 .buttons.twice .btn {
   float: left;
 }
-/* line 709, ../src/sass/base/_base.scss */
+/* line 710, ../src/sass/base/_base.scss */
 .buttons.twice .btn:first-child {
   height: 49px;
   width: 49px;
@@ -1040,24 +1040,25 @@ p.product-title span {
     background-size: 146px auto;
   }
 }
-/* line 711, ../src/sass/base/_base.scss */
+/* line 712, ../src/sass/base/_base.scss */
 .buttons.twice .btn:first-child span {
   top: 48px;
 }
-/* line 713, ../src/sass/base/_base.scss */
+/* line 714, ../src/sass/base/_base.scss */
 .buttons.twice .btn + .btn {
   float: right;
 }
-/* line 715, ../src/sass/base/_base.scss */
+/* line 716, ../src/sass/base/_base.scss */
 .buttons.twice .btn + .btn span {
   top: 34px;
 }
-/* line 720, ../src/sass/base/_base.scss */
+/* line 721, ../src/sass/base/_base.scss */
 .buttons.edit {
   overflow: hidden;
   margin: 25px 0;
+  text-align: center;
 }
-/* line 724, ../src/sass/base/_base.scss */
+/* line 726, ../src/sass/base/_base.scss */
 .buttons.edit .btn-scan {
   height: 40px;
   line-height: 40px;
@@ -1066,18 +1067,18 @@ p.product-title span {
   border-radius: 10px;
   border: none;
 }
-/* line 727, ../src/sass/base/_base.scss */
+/* line 729, ../src/sass/base/_base.scss */
 .buttons.edit.middle .btn-scan {
   display: inline-block;
   width: 45%;
   float: none !important;
   font-family: 'MyriadProSemibold';
 }
-/* line 733, ../src/sass/base/_base.scss */
+/* line 735, ../src/sass/base/_base.scss */
 .buttons.edit.middle .btn-scan:first-child {
   margin-right: 8%;
 }
-/* line 741, ../src/sass/base/_base.scss */
+/* line 743, ../src/sass/base/_base.scss */
 .buttons .btn-scan:first-child {
   color: #2d2e2d !important;
   font-size: 10px;
@@ -1094,7 +1095,7 @@ p.product-title span {
   -webkit-border-radius: 5px;
   border-radius: 5px 5px 0 0;
 }
-/* line 756, ../src/sass/base/_base.scss */
+/* line 758, ../src/sass/base/_base.scss */
 .buttons .btn-scan + .btn-scan {
   color: #fc0d13 !important;
   font-size: 25px;
@@ -1107,21 +1108,64 @@ p.product-title span {
   border-top: 1px solid #d6d4d4;
   width: 100% !important;
 }
+/* line 770, ../src/sass/base/_base.scss */
+.buttons.arrondis {
+  position: relative;
+}
+/* line 773, ../src/sass/base/_base.scss */
+.buttons.arrondis:after {
+  background: #dddbdc;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 100%;
+  z-index: -1;
+}
+/* line 785, ../src/sass/base/_base.scss */
+.buttons.arrondis .btn-scan {
+  border: none;
+  color: #fff !important;
+  display: inline-block;
+  height: 69px;
+  width: 69px !important;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background: #fc0d13;
+  font-family: 'lobsterregular';
+  font-size: 15px;
+  text-align: center;
+  min-width: auto !important;
+  line-height: 69px;
+  margin-left: -5px;
+}
+/* line 800, ../src/sass/base/_base.scss */
+.buttons.arrondis .btn-scan:first-child {
+  font-size: 13px;
+  color: #383837 !important;
+  background: #e9e8ef;
+  font-family: 'ralewayregular';
+  text-transform: uppercase;
+  margin-left: 0;
+}
 
 /* Profile page */
-/* line 773, ../src/sass/base/_base.scss */
+/* line 816, ../src/sass/base/_base.scss */
 .box-full + .box-full {
   margin-top: 30px;
   border-top: 2px solid #ff8080;
   padding-top: 20px;
 }
-/* line 779, ../src/sass/base/_base.scss */
+/* line 822, ../src/sass/base/_base.scss */
 .box-full .title {
   border: none;
   padding: 0;
 }
 
-/* line 784, ../src/sass/base/_base.scss */
+/* line 827, ../src/sass/base/_base.scss */
 .profile {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1133,26 +1177,26 @@ p.product-title span {
   width: 70px;
 }
 
-/* line 793, ../src/sass/base/_base.scss */
+/* line 836, ../src/sass/base/_base.scss */
 .select {
   display: inline-block;
   position: relative;
   width: 100%;
 }
-/* line 799, ../src/sass/base/_base.scss */
+/* line 842, ../src/sass/base/_base.scss */
 .select:before, .select:after {
   content: " ";
   position: absolute;
   pointer-events: none;
 }
-/* line 804, ../src/sass/base/_base.scss */
+/* line 847, ../src/sass/base/_base.scss */
 .select:before {
   width: 2.25em;
   height: 100%;
   top: 0;
   right: 0;
 }
-/* line 812, ../src/sass/base/_base.scss */
+/* line 855, ../src/sass/base/_base.scss */
 .select:after {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -1161,7 +1205,7 @@ p.product-title span {
   top: 50%;
   margin-top: -3px;
 }
-/* line 821, ../src/sass/base/_base.scss */
+/* line 864, ../src/sass/base/_base.scss */
 .select select {
   padding: .25em 2.5em .25em .375em;
   -webkit-appearance: none;
@@ -1175,17 +1219,17 @@ p.product-title span {
   height: 40px !important;
   line-height: 40px !important;
 }
-/* line 830, ../src/sass/base/_base.scss */
+/* line 873, ../src/sass/base/_base.scss */
 .select select::-ms-expand {
   display: none;
 }
 
-/* line 838, ../src/sass/base/_base.scss */
+/* line 881, ../src/sass/base/_base.scss */
 .new_address {
   display: none;
   margin-top: 15px;
 }
-/* line 842, ../src/sass/base/_base.scss */
+/* line 885, ../src/sass/base/_base.scss */
 .new_address.show {
   display: block;
 }
@@ -1193,42 +1237,42 @@ p.product-title span {
 /* Min View Port */
 /* Android Portrait */
 @media screen and (max-height: 456px) {
-  /* line 848, ../src/sass/base/_base.scss */
+  /* line 891, ../src/sass/base/_base.scss */
   body {
     min-height: 515px;
   }
 }
 /* iPhone 5 Portrait */
 @media screen and (max-height: 444px) {
-  /* line 849, ../src/sass/base/_base.scss */
+  /* line 892, ../src/sass/base/_base.scss */
   body {
     min-height: 504px;
   }
 }
 /* iPhone Portrait */
 @media screen and (max-height: 356px) {
-  /* line 850, ../src/sass/base/_base.scss */
+  /* line 893, ../src/sass/base/_base.scss */
   body {
     min-height: 416px;
   }
 }
 /* Android Landscape */
 @media screen and (max-height: 243px) {
-  /* line 851, ../src/sass/base/_base.scss */
+  /* line 894, ../src/sass/base/_base.scss */
   body {
     min-height: 295px;
   }
 }
 /* Android Landscape */
 @media screen and (max-height: 237px) {
-  /* line 852, ../src/sass/base/_base.scss */
+  /* line 895, ../src/sass/base/_base.scss */
   body {
     min-height: 295px;
   }
 }
 /* iPhone Landscape */
 @media screen and (max-height: 208px) {
-  /* line 853, ../src/sass/base/_base.scss */
+  /* line 896, ../src/sass/base/_base.scss */
   body {
     min-height: 268px;
   }
