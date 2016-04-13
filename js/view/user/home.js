@@ -26,10 +26,10 @@ define([
 				Utils.router.navigate('home',{ trigger:true });
             }
 
-			/*var scanner = cordova.require("cordova/plugin/BarcodeScanner");  
-	        window.plugins.barcodeScanner.scan( function (result) {*/
+			var scanner = cordova.require("cordova/plugin/BarcodeScanner");  
+	        window.plugins.barcodeScanner.scan( function (result) {
 
-	            var text = /*(result.text) ? jQuery.parseJSON(result.text) :*/ { productId: 12, storeId: 1},
+	            var text = (result.text) ? jQuery.parseJSON(result.text) : { productId: 8, storeId: 1},
 	            	data = {
 						token: Utils.storage.get('token').key,
 						storeId: text.storeId,
@@ -69,9 +69,9 @@ define([
 				});
 
 
-	        /*}, function (error) { 
+	        }, function (error) { 
 	            alert("Scanning failed: ", error); 
-	        });*/
+	        });
 
 	        return false;
 		},
