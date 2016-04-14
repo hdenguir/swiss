@@ -1143,7 +1143,7 @@ p.product-title span {
   text-align: center;
   min-width: auto !important;
   line-height: 69px;
-  margin-left: -5px;
+  margin-left: -4px;
 }
 /* line 800, ../src/sass/base/_base.scss */
 .buttons.arrondis .btn-scan:first-child {
