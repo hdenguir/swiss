@@ -1486,7 +1486,7 @@ p.product-title span {
 .form .formline i {
   position: absolute;
   top: 15px;
-  right: 3px;
+  right: -1px;
   display: none;
 }
 /* line 198, ../src/sass/base/_forms.scss */
