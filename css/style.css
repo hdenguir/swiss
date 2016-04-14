@@ -705,19 +705,22 @@ ul.list-adress.check li + li {
 /* line 404, ../src/sass/base/_base.scss */
 ul.list-adress.scan-link2btn {
   margin-bottom: 10px;
-}
-/* line 408, ../src/sass/base/_base.scss */
-ul.list-adress.scan-link2btn .buttons.edit .btn-scan {
-  /* background-color: #ff4d4d; */
-  color: #2d2e2d !important;
-  margin: 0 auto !important;
-  max-width: 218px;
-  min-width: 218px;
-}
-/* line 415, ../src/sass/base/_base.scss */
-ul.list-adress.scan-link2btn .buttons.edit .btn-scan + .btn-scan {
-  color: #fc0d13 !important;
-  min-width: 100%;
+  			/* .buttons{
+  				&.edit {
+  					.btn-scan{ 
+  						background-color: #ff4d4d;
+  
+  						color: #2d2e2d !important;
+  						margin: 0 auto !important;
+  					    max-width: 218px;
+  					    min-width: 218px;
+  						+ .btn-scan{
+  							color: $red3 !important; 
+  					    	min-width: 100%;
+  						}
+  					} 
+  				}
+  			} */
 }
 /* line 423, ../src/sass/base/_base.scss */
 ul.list-adress.scan-link2btn .title {
